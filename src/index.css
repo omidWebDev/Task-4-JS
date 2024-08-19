@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --background: #000430;
+  --secondaryBackground: #171c48;
+  --text: #fff;
+  --purple: #828dff;
+  --teal: #24feee;
+}
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background-color: var(--background);
+  color: var(--text);
+}
+html {
+  font-size: 62.5%;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 10rem 1rem;
+  max-width: 500px;
+}
+.stats-container {
+  padding: 3rem;
+  border-radius: 2rem;
+  border: 0.2rem solid var(--purple);
+  width: 100%;
+  display: flex;
+}
+.details {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+}
+#progressBar {
+  display: flex;
+  flex-direction: column;
+  width: 200%;
+  height: 1rem;
+  background-color: var(--secondaryBackground);
+  border-radius: 0.5rem;
+  margin-top: 2rem;
+}
+#progress {
+  width: 66%;
+  height: 1rem;
+  background-color: var(--teal);
+  border-radius: 1rem;
+  transition: all 0.3s easc;
+}
+#numbers {
+  width: 10rem;
+  height: 10rem;
+  background-color: var(--purple);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 3rem;
+  font-weight: bold;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+form {
+  display: flex;
+  margin-top: 2rem;
+  width: 100%;
+}
+input {
+  padding: 0.5rem;
+  width: 92%;
+  border-radius: 1rem;
+  border: 0;
+  background-color: var(--secondaryBackground);
+  color: var(--text);
+}
+button {
+  width: 4rem;
+  padding: 1rem;
+  border-radius: 50%;
+  border: 0;
+  font-size: 2rem;
+  font-weight: bold;
+  background-color: var(--purple);
+  color: var(--text);
+  margin-left: 0.5rem;
+}
+.task-list {
+  width: 100%;
+}
+.task-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--purple);
+  margin: 1rem auto;
+}
+.task-list li button {
+  width: 4rem;
+  height: 4rem;
+}
+.task-list li span {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 2rem;
+  width: 100%;
+}
+@media screen and (min-width: 480px) {
+  .container {
+    margin: 10rem auto;
+  }
+}
